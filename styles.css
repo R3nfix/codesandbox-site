@@ -164,7 +164,7 @@ a {
 }
 
 .header {
-  width: 1920px;
+  width: 100%;
   height: 54px;
   background-color: #0F0E0E;
   padding-top: 14px;
@@ -174,6 +174,7 @@ a {
 .header__list {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 20px;
   font-family: var(--font-family);
   font-size: 13px;
@@ -425,8 +426,9 @@ a {
   align-items: center;
   position: relative;
   margin: 0 auto;
-  width: 1100px;
-  height: 500px;
+  max-width: 1100px;
+  width: 100%;
+  height: auto;
 }
 
 .main__code-collaboration-image-person {
@@ -518,7 +520,7 @@ a {
 .main__specifications-grid-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 1100px;
+  max-width: 1100px;
   height: 432px;
   gap: 38px;
   margin: 0 auto;
@@ -606,38 +608,30 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 1100px;
-  height: 432px;
+  height: auto;
   gap: 38px;
   margin: 0 auto;
-  margin-top: -400px;
+  margin-top: 0;
 }
 
 .main__dev-specifications {
-  margin-top: -200px;
-  margin-bottom: 402px;
+  margin: 60px auto 40px;
+  max-width: 1100px;
+  text-align: center;
+  padding-top: 0;
+  position: static;
 }
 
-.main__dev-specifications-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--second-family);
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: 0.03em;
-}
-
+.main__dev-specifications-info,
 .main__dev-specifications-info-next {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  margin: 0 auto 12px;
   font-family: var(--second-family);
   font-size: 48px;
   font-weight: 400;
   line-height: 100%;
   letter-spacing: 0.03em;
-  margin-bottom: 85px;
+  position: static;
 }
 
 .main__npm {
@@ -754,7 +748,7 @@ p {
 .main__reviews-grid-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 1100px;
+  max-width: 1100px;
   height: 432px;
   gap: 38px;
   margin: 0 auto;
@@ -941,9 +935,7 @@ p {
   color: var(--black);
 }
 
-.main__personal-use-grid-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.main__personal-use-wrapper {
   width: 1920px;
   height: 736px;
   margin: 0 auto;
@@ -1032,3 +1024,383 @@ p {
 }
 
 /* Adaptive */
+
+@media (max-width: 1750px) {
+
+header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  left: 200px;
+}
+
+.main__personal-use-wrapper {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 100px;
+  height: auto;
+}
+
+.main__personal-use-photo1,
+.main__personal-use-photo2,
+.main__personal-use-photo3,
+.main__personal-use-photo4 {
+  position: static;
+  width: 300px;
+  height: auto;
+  justify-items: center;
+  align-items: center;
+}
+}
+
+@media (max-width: 1250px) {
+
+.header__list {
+  width: 80%;
+  padding: 0 2px;
+
+}
+
+.header__logo {
+  left: 50px;
+}
+
+.main__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__list-item {
+  padding-right: 30px;
+}
+
+.main__code-collaboration-image {
+  height: auto;
+}
+
+.main__code-collaboration-image-person {
+  display: none;
+}
+
+.main__specifications-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 3fr);
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 1000px;
+}
+
+.main__dev-specifications {
+  margin-top: 40px auto 24px;
+  padding: 0 16px;
+}
+
+.main__dev-specifications-grid-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 3fr);
+  justify-items: center;
+  gap: 24px;
+  margin-bottom: -1000px;
+}
+
+.main__reviews-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  margin-bottom: 100px;
+}
+
+.main__dev-specifications-image {
+  width: 100%;
+  height: auto;
+}
+
+.main__reviews-container  {
+  display: grid;
+  margin-top: 1000px;
+}
+
+.main__personal-use {
+  display: flex;
+  margin-top: 1000px;
+}
+
+.main__review-react-image {
+  position: absolute;
+  bottom: 195px;
+  left: 190px;
+}
+
+.main__review-apollo-image {
+  position: absolute;
+  top: 630px;
+  left: 190px;
+}
+
+.main__review-stripe-image {
+  position: absolute;
+  top: 1090px;
+  left: 190px;
+}
+
+.footer__grid {
+  gap: 15px;
+}
+
+}
+
+@media (max-width: 1100px) {
+
+.header {
+  height: 120px;
+}
+
+.header__list {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  justify-content: center;
+  gap: 15px;
+  width: 80%;
+  padding: 0 2px;
+}
+
+.header__logo {
+  left: 150px;
+  top: 50px;
+}
+
+.main__codesandbox-experience {
+  height: auto;
+}
+
+.main__description-section-img {
+  height: auto;
+}
+
+.main__codesandbox-ios-image {
+  height: auto;
+}
+
+.main__code-collaboration-image {
+  height: auto;
+}
+
+.main__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__list-item {
+  padding-right: 30px;
+}
+}
+
+@media (max-width: 1024px) {
+  .header__logo {
+    left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    justify-items: center;
+  }
+
+  .footer__column--margin {
+    margin-left: 250px;
+  }
+
+  .header__logo {
+    left: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+.header {
+  height: 170px;
+}
+
+.header__list {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  justify-content: center;
+  gap: 15px;
+  width: 50%;
+  padding: 0 2px;
+}
+
+.header__logo {
+  top: 80px;
+}
+
+.main__info-second, .main__info-second-next {
+  font-size: 40px;
+}
+
+.main__info-third, .main__info-third-next {
+  font-size: 20px;
+}
+
+.main__list {
+  margin-left: -135px;
+}
+
+.main__link, .main__link--white {
+  font-size: 15px;
+}
+
+.main__codesandbox-ios-info-second, .main__codesandbox-ios-info-second-next {
+  font-size: 40px;
+}
+
+.main__code-collaboration-info, .main__code-collaboration-info-next {
+  font-size: 40px;
+}
+
+.main__reviews-info {
+  text-align: center;
+  font-size: 40px;
+}
+
+.footer__column--margin {
+  margin-left: 130px;
+}
+}
+
+@media (max-width: 375px) {
+  .header {
+  height: 200px;
+}
+
+.header__list {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  justify-content: center;
+  gap: 15px;
+  width: 20%;
+  padding: 0 2px;
+}
+
+.header__logo {
+  top: 10px;
+  left: 125px;
+}
+
+.main__info-second, .main__info-second-next {
+  font-size: 35px;
+}
+
+.main__info-third, .main__info-third-next {
+  font-size: 18px;
+}
+
+.main__list {
+  margin-left: -160px;
+}
+
+.main__link--white, .main__link {
+  font-size: 13px;
+}
+
+.main__code-collaboration-info, .main__code-collaboration-info-next {
+  font-size: 35px;
+}
+
+.main__code-collaboration-description, .main__code-collaboration-description-next {
+  font-size: 18px;
+}
+
+.footer__column {
+  margin-left: 10px;
+}
+}
+
+@media (max-width: 320px) {
+  .header__logo {
+  top: 10px;
+  left: 100px;
+}
+
+.main__info-first, .main__info-second, .main__info-second-next {
+  font-size: 30px;
+}
+
+.main__info-third, .main__info-third-next {
+  font-size: 18px;
+}
+
+.main__list {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  justify-items: center;
+  margin-left: -170px;
+}
+
+.main__link--white, .main__link {
+  font-size: 13px;
+}
+
+.main__codesandbox-ios-info-first {
+  text-align: center;
+  font-size: 30px;
+}
+
+.main__codesandbox-ios-info-second, .main__codesandbox-ios-info-second-next {
+  font-size: 30px;
+}
+
+.main__codesandbox-ios-info-description, .main__codesandbox-ios-info-description-next {
+  font-size: 18px;
+}
+
+.main__code-collaboration-info, .main__code-collaboration-info-next {
+  font-size: 30px;
+}
+
+.main__code-collaboration-description, .main__code-collaboration-description-next {
+  font-size: 18px;
+}
+
+.main__specifications-grid-wrapper {
+  margin-left: -20px;
+}
+
+.main__dev-specifications-info, .main__dev-specifications-info-next {
+  font-size: 30px;
+}
+
+.main__dev-specifications-grid-wrapper {
+  margin-left: -30px;
+}
+
+.main__reviews-info {
+  font-size: 28px;
+  text-align: center;
+}
+
+.main__reviews-grid-wrapper {
+  margin-left: -30px;
+}
+
+.footer__grid {
+  margin-left: -20px;
+}
+}

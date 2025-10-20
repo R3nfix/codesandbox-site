@@ -1248,6 +1248,7 @@ header {
 }
 
 .header__logo {
+  left: 1px;
   top: 80px;
 }
 
@@ -1264,7 +1265,7 @@ header {
 }
 
 .main__link, .main__link--white {
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .main__codesandbox-ios-info-second, .main__codesandbox-ios-info-second-next {
@@ -1281,7 +1282,7 @@ header {
 }
 
 .footer__column--margin {
-  margin-left: 130px;
+  margin-left: 115px;
 }
 }
 

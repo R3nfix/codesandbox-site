@@ -1261,7 +1261,7 @@ header {
 }
 
 .main__list {
-  margin-left: -135px;
+  margin-left: -150px;
 }
 
 .main__link, .main__link--white {
@@ -1282,7 +1282,11 @@ header {
 }
 
 .footer__column--margin {
-  margin-left: 115px;
+  margin-left: 110px;
+}
+
+.footer__link {
+  font-size: 13px;
 }
 }
 
